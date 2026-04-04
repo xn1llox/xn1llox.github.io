@@ -423,6 +423,19 @@
       text-align: center;
     }
     footer .brand { color: #fff; font-weight: 700; }
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+    .social-links a:hover { border-color: var(--cyan); color: var(--cyan); background: var(--cyan-lo); }
 
     /* ===== WhatsApp flotante ===== */
     .wa-float {
@@ -700,6 +713,16 @@
                 <div class="ci-value">Lunes a Viernes · 9:00 – 18:00</div>
               </div>
             </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="bi bi-share-fill"></i></div>
+              <div>
+                <div class="ci-label">Redes sociales</div>
+                <div class="ci-value d-flex gap-3 mt-1">
+                  <a href="https://www.facebook.com/share/18B9kzDeaR/" target="_blank" rel="noopener" style="color:var(--cyan); text-decoration:none;"><i class="bi bi-facebook"></i> Facebook</a>
+                  <a href="https://www.instagram.com/xn1llox?igsh=ZzVwbWJ5Z2duZjBh" target="_blank" rel="noopener" style="color:var(--cyan); text-decoration:none;"><i class="bi bi-instagram"></i> Instagram</a>
+                </div>
+              </div>
+            </div>
             <div class="text-center mt-4">
               <a href="https://wa.me/56951810373?text=Hola%2C%20necesito%20información%20sobre%20sus%20servicios" target="_blank" rel="noopener" class="btn-wa-lg">
                 <i class="bi bi-whatsapp"></i> Escríbenos por WhatsApp
@@ -717,6 +740,11 @@
       <img src="img/logo.jpeg" alt="Espinoza Informática" style="height:38px; border-radius:6px; margin-bottom:12px;" />
       <p class="mb-1 brand">Felipe Espinoza IT Solutions</p>
       <p class="mb-1" style="font-size:0.82rem;">Informática Felipe Andrés Espinoza E.I.R.L. · Parral, Chile</p>
+      <div class="social-links d-flex justify-content-center gap-2 my-3">
+        <a href="https://www.facebook.com/share/18B9kzDeaR/" target="_blank" rel="noopener" title="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/xn1llox?igsh=ZzVwbWJ5Z2duZjBh" target="_blank" rel="noopener" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://wa.me/56951810373" target="_blank" rel="noopener" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+      </div>
       <p class="mb-0" style="font-size:0.78rem;">&copy; <span id="year"></span> Todos los derechos reservados.</p>
     </div>
   </footer>
