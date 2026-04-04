@@ -52,7 +52,7 @@ Sitio web estático de una sola página (`index.html`) con diseño dark tech mod
 1. Crear repositorio con nombre `xn1llox.github.io`
 2. Subir `index.html` y la carpeta `img/`
 3. Ir a **Settings → Pages → Branch: main → Save**
-4. El sitio estará disponible en `https://xn1llox.github.io`
+4. El sitio estará disponible en `https://espinozainformatica.cl/`
 
 ## Contacto
 
