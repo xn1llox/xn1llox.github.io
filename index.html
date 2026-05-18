@@ -3,13 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Felipe Espinoza Informática – Servicios técnicos en Parral, Región del Maule. Mantención, reparación, formateo, desarrollo de software y soluciones tecnológicas para empresas y pymes." />
-  <meta name="keywords" content="informática, mantención computadores, reparación equipos, formateo, desarrollo software, Parral, Maule, Chile, pymes" />
+  <meta name="description" content="Portafolio profesional de Felipe Andrés Espinoza Guajardo, Ingeniero en Informática, Full Stack Developer, Cloud & IT Support en Parral, Región del Maule." />
+  <meta name="keywords" content="Felipe Espinoza, ingeniero informático, full stack developer, Django, Python, cloud, AWS, Azure, soporte IT, Parral, Maule, Chile" />
   <meta name="author" content="Felipe Andrés Espinoza Guajardo" />
-  <meta property="og:title" content="Espinoza Informática · IT Solutions" />
-  <meta property="og:description" content="Soluciones tecnológicas profesionales en Parral, Chile." />
+  <meta property="og:title" content="Felipe Espinoza · Full Stack Developer & Cloud IT" />
+  <meta property="og:description" content="Desarrollo web, cloud, soporte IT, automatización y soluciones tecnológicas para personas, empresas y pymes." />
   <meta property="og:type" content="website" />
-  <title>Espinoza Informática · IT Solutions</title>
+  <meta property="og:url" content="https://espinozainformatica.cl/" />
+  <meta property="og:image" content="https://espinozainformatica.cl/img/logo.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://espinozainformatica.cl/" />
+  <link rel="icon" href="img/logo.jpeg" />
+  <title>Felipe Espinoza · Full Stack Developer & Cloud IT</title>
 
   <!-- Bootstrap 5 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
@@ -17,21 +22,30 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <!-- AOS CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
-    /* ===== Variables dark tech ===== */
+    /* ===== Variables tech profesional ===== */
     :root {
-      --bg:      #0a0f1e;
-      --bg2:     #0d1117;
-      --card:    #111827;
-      --card2:   #1a2235;
-      --primary: #0d6efd;
-      --cyan:    #00b4d8;
-      --cyan-lo: rgba(0,180,216,0.10);
-      --cyan-md: rgba(0,180,216,0.25);
-      --border:  rgba(0,180,216,0.15);
-      --text:    #e2e8f0;
-      --muted:   #8892a4;
+      --bg:      #0d1117;
+      --bg2:     #111827;
+      --card:    #161b22;
+      --card2:   #18181b;
+      --primary: #58a6ff;
+      --cyan:    #22d3ee;
+      --accent:  #14b8a6;
+      --cyan-lo: rgba(34,211,238,0.10);
+      --cyan-md: rgba(88,166,255,0.28);
+      --border:  rgba(88,166,255,0.18);
+      --text:    #e6edf3;
+      --muted:   #8b949e;
+      --card-text: #e6edf3;
+      --card-muted: #a7b3c2;
+      --success: #22c55e;
+      --line: rgba(148,163,184,0.16);
     }
 
     html { scroll-behavior: smooth; }
@@ -39,12 +53,30 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+      letter-spacing: -0.01em;
     }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      background:
+        radial-gradient(circle at 18% 14%, rgba(88,166,255,0.14), transparent 28%),
+        radial-gradient(circle at 82% 18%, rgba(34,211,238,0.13), transparent 30%),
+        radial-gradient(circle at 58% 78%, rgba(20,184,166,0.10), transparent 24%),
+        linear-gradient(180deg, rgba(255,255,255,0.025), transparent 36%);
+    }
+
+    a { transition: color 0.2s, transform 0.2s, border-color 0.2s, background 0.2s; }
+
+    section { scroll-margin-top: 78px; }
 
     /* ===== Navbar ===== */
     .navbar {
-      background: rgba(10,15,30,0.96) !important;
+      background: rgba(11,17,32,0.88) !important;
       border-bottom: 1px solid var(--border);
       backdrop-filter: blur(12px);
     }
@@ -76,7 +108,9 @@
     #inicio {
       position: relative;
       min-height: 100vh;
-      background: var(--bg);
+      background:
+        linear-gradient(135deg, rgba(13,17,23,0.97), rgba(17,24,39,0.96)),
+        var(--bg);
       display: flex;
       align-items: center;
       padding-top: 76px;
@@ -86,24 +120,46 @@
       content: '';
       position: absolute; inset: 0;
       background-image:
-        linear-gradient(rgba(0,180,216,0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,180,216,0.035) 1px, transparent 1px);
+        linear-gradient(rgba(125,211,252,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(125,211,252,0.07) 1px, transparent 1px);
       background-size: 48px 48px;
     }
     #inicio::after {
       content: '';
       position: absolute; inset: 0;
       background:
-        radial-gradient(ellipse at 65% 45%, rgba(13,110,253,0.13) 0%, transparent 55%),
-        radial-gradient(ellipse at 15% 75%, rgba(0,180,216,0.09) 0%, transparent 50%);
+        radial-gradient(ellipse at 70% 42%, rgba(88,166,255,0.22) 0%, transparent 55%),
+        radial-gradient(ellipse at 15% 75%, rgba(20,184,166,0.13) 0%, transparent 48%);
     }
     #inicio .container { position: relative; z-index: 1; }
+
+    .hero-glow {
+      position: absolute;
+      width: min(520px, 70vw);
+      height: min(520px, 70vw);
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.75;
+      pointer-events: none;
+      animation: glowDrift 9s ease-in-out infinite alternate;
+    }
+    .hero-glow.one {
+      right: 4%;
+      top: 14%;
+      background: rgba(34,211,238,0.11);
+    }
+    .hero-glow.two {
+      left: -12%;
+      bottom: -14%;
+      background: rgba(88,166,255,0.10);
+      animation-delay: 1.8s;
+    }
 
     .hero-tag {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(0,180,216,0.08);
+      background: rgba(34,211,238,0.12);
       color: var(--cyan);
       border: 1px solid var(--cyan-md);
       border-radius: 50px;
@@ -136,6 +192,53 @@
       margin-bottom: 2rem;
     }
 
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.8rem;
+    }
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #dbeafe;
+      background: rgba(255,255,255,0.045);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 13px;
+      font-size: 0.83rem;
+    }
+
+    .hero-live {
+      display: grid;
+      gap: 0.65rem;
+      margin: -0.4rem 0 1.8rem;
+      max-width: 560px;
+    }
+    .live-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      width: fit-content;
+      color: var(--card-text);
+      background: rgba(22,27,34,0.72);
+      border: 1px solid rgba(34,211,238,0.18);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      box-shadow: 0 0 22px rgba(34,211,238,0.06);
+    }
+    .status-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--success);
+      box-shadow: 0 0 0 5px rgba(34,197,94,0.12), 0 0 16px rgba(34,197,94,0.8);
+      animation: pulseDot 1.8s ease-in-out infinite;
+    }
+
     .btn-cta {
       background: linear-gradient(135deg, var(--cyan), var(--primary));
       color: #fff;
@@ -147,12 +250,32 @@
       transition: all 0.25s;
       text-decoration: none;
       display: inline-block;
-      box-shadow: 0 0 22px rgba(0,180,216,0.22);
+      box-shadow: 0 14px 34px rgba(88,166,255,0.22);
     }
     .btn-cta:hover {
       color: #fff;
       transform: translateY(-2px);
-      box-shadow: 0 0 36px rgba(0,180,216,0.4);
+      box-shadow: 0 18px 44px rgba(88,166,255,0.34);
+    }
+
+    .btn-ghost {
+      color: #fff;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 24px;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.035);
+    }
+    .btn-ghost:hover {
+      color: var(--cyan);
+      border-color: rgba(34,211,238,0.48);
+      transform: translateY(-2px);
+      background: var(--cyan-lo);
     }
 
     .btn-wa {
@@ -172,10 +295,11 @@
     /* Terminal card */
     .terminal {
       background: #0d1117;
-      border: 1px solid rgba(0,180,216,0.22);
+      border: 1px solid rgba(88,166,255,0.26);
       border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 0 50px rgba(0,180,216,0.08);
+      box-shadow: 0 22px 60px rgba(0,0,0,0.34), 0 0 36px rgba(88,166,255,0.08);
+      animation: floatPanel 7s ease-in-out infinite;
     }
     .term-bar {
       background: #161b22;
@@ -188,12 +312,12 @@
     .term-dot { width: 12px; height: 12px; border-radius: 50%; }
     .term-body {
       padding: 1.4rem 1.6rem;
-      font-family: 'Courier New', monospace;
+      font-family: 'JetBrains Mono', 'Courier New', monospace;
       font-size: 0.84rem;
       line-height: 1.95;
     }
     .tp { color: var(--cyan); }
-    .tc { color: #e2e8f0; }
+    .tc { color: var(--text); }
     .tok { color: #22c55e; }
     .tco { color: #4b5563; }
     .tcur {
@@ -241,7 +365,7 @@
       display: block;
       border-radius: 16px;
       border: 2px solid var(--border);
-      box-shadow: 0 0 40px rgba(0,180,216,0.10);
+      box-shadow: 0 24px 60px rgba(8,47,73,0.28);
     }
 
     .about-feat {
@@ -269,7 +393,7 @@
     #servicios { background: var(--bg); }
 
     .service-card {
-      background: var(--card);
+      background: linear-gradient(145deg, var(--card), var(--card2));
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 2rem 1.5rem;
@@ -291,7 +415,7 @@
     .service-card:hover {
       border-color: var(--cyan-md);
       transform: translateY(-6px);
-      box-shadow: 0 14px 40px rgba(0,180,216,0.12);
+      box-shadow: 0 22px 46px rgba(0,0,0,0.24), 0 0 24px rgba(88,166,255,0.07);
     }
     .service-card:hover::before { opacity: 1; }
 
@@ -309,14 +433,43 @@
       transition: all 0.3s;
     }
     .service-card:hover .service-icon {
-      background: rgba(0,180,216,0.18);
-      box-shadow: 0 0 20px rgba(0,180,216,0.2);
+      background: rgba(34,211,238,0.18);
+      box-shadow: 0 0 24px rgba(20,184,166,0.22);
     }
-    .service-card h5 { color: #fff; font-weight: 700; margin-bottom: 0.5rem; font-size: 1rem; }
-    .service-card p  { color: var(--muted); font-size: 0.87rem; margin: 0; line-height: 1.6; }
+    .service-card h5 { color: var(--card-text); font-weight: 800; margin-bottom: 0.5rem; font-size: 1rem; }
+    .service-card p  { color: var(--card-muted); font-size: 0.87rem; margin: 0; line-height: 1.6; }
 
     /* ===== Galería ===== */
     #trabajos { background: var(--bg2); }
+
+    .code-gallery {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(180px, 0.75fr);
+      gap: 0.85rem;
+      margin-bottom: 1.2rem;
+      position: relative;
+      z-index: 1;
+    }
+    .code-shot {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      background: rgba(15,23,42,0.55);
+      min-height: 100%;
+    }
+    .code-shot img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+    .code-shot.desktop img {
+      object-fit: contain;
+      background: #09090b;
+    }
+    .code-shot.android img {
+      object-position: top center;
+    }
 
     .gal-item {
       border-radius: 12px;
@@ -334,8 +487,8 @@
       transition: transform 0.4s;
     }
     .gal-item:hover {
-      border-color: rgba(0,180,216,0.5);
-      box-shadow: 0 8px 30px rgba(0,180,216,0.15);
+      border-color: rgba(34,211,238,0.52);
+      box-shadow: 0 18px 38px rgba(0,0,0,0.28), 0 0 22px rgba(88,166,255,0.08);
     }
     .gal-item:hover img { transform: scale(1.06); }
     .gal-overlay {
@@ -352,7 +505,7 @@
 
     /* Modal oscuro */
     .modal-content {
-      background: var(--card);
+      background: #12375d;
       border: 1px solid var(--border);
     }
     .modal-header { border-bottom: 1px solid var(--border); }
@@ -363,17 +516,18 @@
     #contacto { background: var(--bg); }
 
     .contact-card {
-      background: var(--card);
+      background: linear-gradient(145deg, var(--card), var(--card2));
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 2.5rem;
+      box-shadow: 0 24px 54px rgba(0,0,0,0.25), 0 0 28px rgba(88,166,255,0.07);
     }
     .contact-item {
       display: flex;
       align-items: center;
       gap: 1.2rem;
       padding: 1rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid var(--line);
     }
     .contact-item:last-of-type { border-bottom: none; }
     .ci-icon {
@@ -388,10 +542,369 @@
       justify-content: center;
       flex-shrink: 0;
     }
-    .ci-label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
-    .ci-value { color: #fff; font-weight: 600; font-size: 0.92rem; word-break: break-all; overflow-wrap: break-word; }
-    .ci-value a { color: #fff; text-decoration: none; }
+    .ci-label { font-size: 0.7rem; color: var(--card-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
+    .ci-value { color: var(--card-text); font-weight: 700; font-size: 0.92rem; word-break: break-all; overflow-wrap: break-word; }
+    .ci-value a { color: var(--card-text); text-decoration: none; }
     .ci-value a:hover { color: var(--cyan); }
+
+    /* ===== Perfil profesional / CV ===== */
+    .profile-panel,
+    .timeline-card,
+    .project-card,
+    .edu-card,
+    .skill-panel {
+      background:
+        linear-gradient(145deg, rgba(30,41,59,0.98), rgba(39,52,73,0.96)),
+        var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 24px 54px rgba(0,0,0,0.24), 0 0 28px rgba(34,211,238,0.06);
+    }
+
+    .profile-panel {
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .profile-panel::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(88,166,255,0.14), transparent 38%);
+      pointer-events: none;
+    }
+    .profile-panel > * { position: relative; z-index: 1; }
+
+    .contact-chip,
+    .tech-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: var(--card-text);
+      background: rgba(34,211,238,0.08);
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+    .contact-chip:hover,
+    .tech-chip:hover {
+      color: var(--cyan);
+      border-color: rgba(88,166,255,0.50);
+      background: var(--cyan-lo);
+    }
+
+    .signal-card {
+      background: rgba(15,23,42,0.42);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1rem;
+      height: 100%;
+    }
+    .signal-card strong {
+      display: block;
+      color: var(--card-text);
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+    }
+    .signal-card span {
+      color: var(--card-muted);
+      font-size: 0.84rem;
+      line-height: 1.55;
+    }
+
+    #experiencia,
+    #formacion { background: var(--bg2); }
+    #proyectos,
+    #habilidades { background: var(--bg); }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 1rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 18px;
+      top: 12px;
+      bottom: 12px;
+      width: 1px;
+      background: linear-gradient(var(--cyan), transparent);
+    }
+    .timeline-card {
+      position: relative;
+      margin-left: 48px;
+      padding: 1.4rem;
+    }
+    .timeline-card::before {
+      content: '';
+      position: absolute;
+      left: -38px;
+      top: 1.6rem;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 0 7px rgba(88,166,255,0.10), 0 0 22px rgba(88,166,255,0.40);
+    }
+    .timeline-card h3,
+    .project-card h3,
+    .edu-card h3 {
+      color: var(--card-text);
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 0.35rem;
+    }
+    .meta-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      color: var(--card-muted);
+      font-size: 0.84rem;
+      margin-bottom: 1rem;
+    }
+    .clean-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.55rem;
+      color: var(--card-muted);
+      font-size: 0.92rem;
+    }
+    .clean-list li {
+      position: relative;
+      padding-left: 1.35rem;
+      line-height: 1.6;
+    }
+    .clean-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 12px rgba(20,184,166,0.38);
+    }
+
+    .project-card,
+    .edu-card,
+    .skill-panel {
+      padding: 1.5rem;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .project-card::after {
+      content: '';
+      position: absolute;
+      right: -46px;
+      top: -46px;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 1px solid rgba(34,211,238,0.22);
+      background: rgba(34,211,238,0.06);
+    }
+    .project-card p,
+    .edu-card p,
+    .skill-panel p {
+      color: var(--card-muted);
+      line-height: 1.7;
+    }
+    .project-link {
+      color: var(--cyan);
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .project-link:hover { color: #fff; }
+
+    .project-media {
+      position: relative;
+      z-index: 1;
+      margin: -0.25rem -0.25rem 1.2rem;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: rgba(15,23,42,0.46);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+    }
+    .project-media img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+    .project-logo-strip {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      margin-bottom: 1rem;
+    }
+    .project-logo {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      object-fit: contain;
+      padding: 8px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--line);
+    }
+    .project-logo-title {
+      color: #fff;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+    .project-logo-sub {
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+    .repo-facts {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin: 1rem 0 1.2rem;
+    }
+    .repo-fact {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.75rem;
+      background: rgba(15,23,42,0.35);
+    }
+    .repo-fact strong {
+      display: block;
+      color: var(--cyan);
+      font-size: 0.95rem;
+      line-height: 1.1;
+      margin-bottom: 0.2rem;
+    }
+    .repo-fact span {
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .cert-list {
+      display: grid;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .cert-item {
+      display: flex;
+      gap: 0.8rem;
+      align-items: flex-start;
+      padding: 0.85rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(15,23,42,0.32);
+      color: var(--card-text);
+      font-size: 0.9rem;
+    }
+    .cert-item i { color: var(--cyan); margin-top: 2px; }
+
+    .skill-group {
+      margin-bottom: 1.3rem;
+    }
+    .skill-group:last-child { margin-bottom: 0; }
+    .skill-group h4 {
+      color: var(--card-text);
+      font-size: 0.95rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+    }
+    .skill-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+
+    .toolkit-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .toolkit-item {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 1rem;
+      min-height: 78px;
+      background: linear-gradient(145deg, rgba(22,27,34,0.95), rgba(24,24,27,0.96));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      color: var(--card-text);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.20);
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    }
+    .toolkit-item::after {
+      content: '';
+      position: absolute;
+      inset: auto -40px -55px auto;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: rgba(34,211,238,0.08);
+      filter: blur(8px);
+    }
+    .toolkit-item:hover {
+      transform: translateY(-4px);
+      border-color: rgba(34,211,238,0.38);
+      box-shadow: 0 24px 50px rgba(0,0,0,0.26), 0 0 28px rgba(34,211,238,0.10);
+    }
+    .toolkit-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      color: var(--cyan);
+      background: rgba(34,211,238,0.10);
+      border: 1px solid rgba(34,211,238,0.18);
+      font-size: 1.25rem;
+    }
+    .toolkit-item strong {
+      display: block;
+      color: #fff;
+      line-height: 1.1;
+    }
+    .toolkit-item span {
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    .lang-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.9rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(15,23,42,0.32);
+      color: var(--card-text);
+      font-weight: 700;
+    }
+    .lang-card span {
+      color: var(--card-muted);
+      font-size: 0.86rem;
+      font-weight: 600;
+    }
 
     .btn-wa-lg {
       background: #25d366;
@@ -416,7 +929,7 @@
 
     /* ===== Footer ===== */
     footer {
-      background: #060a13;
+      background: #070d1a;
       border-top: 1px solid var(--border);
       padding: 30px 0;
       color: var(--muted);
@@ -455,6 +968,83 @@
       z-index: 1050;
     }
     .wa-float:hover { background: #1ebe5a; color: #fff; transform: scale(1.1); }
+
+    @keyframes floatPanel {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @keyframes glowDrift {
+      from { transform: translate3d(0,0,0) scale(1); }
+      to { transform: translate3d(24px,-18px,0) scale(1.08); }
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.18); opacity: 0.78; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .navbar-nav {
+        padding: 1rem 0;
+      }
+      .hero-title {
+        font-size: clamp(2.15rem, 11vw, 3.15rem);
+      }
+      .timeline::before { left: 8px; }
+      .timeline-card {
+        margin-left: 30px;
+      }
+      .timeline-card::before {
+        left: -28px;
+      }
+      .toolkit-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .code-gallery {
+        grid-template-columns: 1fr;
+      }
+      .repo-facts {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      section { padding: 72px 0; }
+      .contact-card,
+      .profile-panel,
+      .timeline-card,
+      .project-card,
+      .edu-card,
+      .skill-panel {
+        padding: 1.15rem;
+      }
+      .hero-meta span,
+      .contact-chip,
+      .tech-chip {
+        width: 100%;
+        justify-content: center;
+      }
+      .wa-float {
+        width: 52px;
+        height: 52px;
+        right: 18px;
+        bottom: 18px;
+      }
+      .toolkit-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -465,15 +1055,17 @@
       <a class="navbar-brand" href="#inicio">
         <img src="img/logo.jpeg" alt="Espinoza Informática" class="navbar-logo" />
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Abrir menú de navegación">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navMenu">
         <ul class="navbar-nav gap-1">
           <li class="nav-item"><a class="nav-link px-3" href="#inicio">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link px-3" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#nosotros">Perfil</a></li>
           <li class="nav-item"><a class="nav-link px-3" href="#servicios">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link px-3" href="#trabajos">Trabajos</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#experiencia">Experiencia</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#habilidades">Skills</a></li>
           <li class="nav-item"><a class="nav-link px-3" href="#contacto">Contacto</a></li>
         </ul>
       </div>
@@ -482,14 +1074,26 @@
 
   <!-- HERO -->
   <section id="inicio">
+    <div class="hero-glow one"></div>
+    <div class="hero-glow two"></div>
     <div class="container">
       <div class="row align-items-center g-5">
         <div class="col-lg-6" data-aos="fade-right">
-          <div class="hero-tag"><i class="bi bi-geo-alt"></i> Parral · Región del Maule · Chile</div>
-          <h1 class="hero-title">Tecnología real.<br/>Soluciones <span class="hl">concretas</span>.</h1>
-          <p class="hero-sub">Mantención, reparación y desarrollo de software personalizado. Servicio técnico de calidad para personas, empresas y pymes.</p>
+          <div class="hero-tag"><i class="bi bi-terminal"></i> Full Stack Developer · Cloud & IT Support</div>
+          <h1 class="hero-title">Felipe Andrés<br/><span class="hl">Espinoza Guajardo</span></h1>
+          <p class="hero-sub">Construyo aplicaciones web, infraestructura cloud y herramientas digitales enfocadas en rendimiento, automatización y experiencia de usuario.</p>
+          <div class="hero-meta">
+            <span><i class="bi bi-geo-alt"></i> Parral, Región del Maule</span>
+            <span><i class="bi bi-code-slash"></i> Python · Django · JavaScript</span>
+            <span><i class="bi bi-cloud-check"></i> AWS · Azure · Linux</span>
+          </div>
+          <div class="hero-live">
+            <div class="live-pill"><span class="status-dot"></span> Disponible para proyectos freelance y soporte IT</div>
+            <div class="live-pill"><span class="status-dot"></span> Actualmente desarrollando Zenith Audio</div>
+          </div>
           <div class="d-flex flex-wrap gap-3">
-            <a href="#servicios" class="btn-cta">Ver servicios</a>
+            <a href="#proyectos" class="btn-cta">Ver proyectos</a>
+            <a href="https://github.com/xn1llox" target="_blank" rel="noopener" class="btn-ghost"><i class="bi bi-github"></i> GitHub</a>
             <a href="https://wa.me/56951810373?text=Hola%2C%20necesito%20información%20sobre%20sus%20servicios" target="_blank" rel="noopener" class="btn-wa"><i class="bi bi-whatsapp me-2"></i>WhatsApp</a>
           </div>
         </div>
@@ -502,18 +1106,16 @@
               <span style="color:#4b5563; font-size:0.75rem; margin-left:8px; font-family:monospace;">espinoza-it ~ bash</span>
             </div>
             <div class="term-body">
-              <div><span class="tp">~/servicios</span> <span class="tc">$ ls</span></div>
-              <div><span class="tok">✓</span> mantencion-equipos/</div>
-              <div><span class="tok">✓</span> reparacion-hardware/</div>
-              <div><span class="tok">✓</span> formateo-so/</div>
-              <div><span class="tok">✓</span> optimizacion/</div>
-              <div><span class="tok">✓</span> desarrollo-software/</div>
-              <div><span class="tok">✓</span> soluciones-empresas/</div>
-              <div class="mt-2"><span class="tp">~/servicios</span> <span class="tc">$ status --check</span></div>
-              <div><span class="tco"># Sistema:</span> <span style="color:#22c55e;">ACTIVO</span></div>
-              <div><span class="tco"># Horario:</span> <span style="color:#22c55e;">L-V 9:00–18:00</span></div>
-              <div><span class="tco"># Zona:</span> <span style="color:#22c55e;">Parral, Maule</span></div>
-              <div><span class="tp">~/servicios</span> <span class="tc">$ _</span><span class="tcur"></span></div>
+              <div><span class="tp">~/felipe</span> <span class="tc">$ whoami</span></div>
+              <div><span class="tok">✓</span> Ingeniero en Informática</div>
+              <div><span class="tok">✓</span> Full Stack Developer</div>
+              <div><span class="tok">✓</span> Cloud & IT Support</div>
+              <div><span class="tok">✓</span> Open Source Builder</div>
+              <div class="mt-2"><span class="tp">~/stack</span> <span class="tc">$ cat tools.txt</span></div>
+              <div><span class="tco">backend:</span> <span style="color:#22c55e;">Python · Django · APIs REST</span></div>
+              <div><span class="tco">cloud:</span> <span style="color:#22c55e;">AWS · Azure · Render · Cloudflare</span></div>
+              <div><span class="tco">data:</span> <span style="color:#22c55e;">MySQL · PostgreSQL · MongoDB</span></div>
+              <div><span class="tp">~/contacto</span> <span class="tc">$ ping felipe</span> <span style="color:#22c55e;">online</span><span class="tcur"></span></div>
             </div>
           </div>
         </div>
@@ -526,25 +1128,32 @@
     <div class="container">
       <div class="row align-items-center g-5">
         <div class="col-lg-4" data-aos="fade-right">
-          <img src="img/yo.jpeg" alt="Felipe Andrés Espinoza Guajardo" class="about-photo" />
+          <img src="img/yo.jpeg" alt="Felipe Andrés Espinoza Guajardo" class="about-photo" loading="lazy" />
         </div>
         <div class="col-lg-7 offset-lg-1" data-aos="fade-left" data-aos-delay="100">
-          <div class="sec-tag">Sobre nosotros</div>
-          <h2 class="sec-title">Felipe Espinoza<br/><span style="color:var(--cyan);">IT Solutions</span></h2>
+          <div class="sec-tag">Perfil profesional</div>
+          <h2 class="sec-title">Soluciones digitales con foco en <span style="color:var(--cyan);">desarrollo, cloud y soporte IT</span></h2>
           <p style="color:var(--muted); line-height:1.85; margin-bottom:2rem;">
-            Soy <strong style="color:#fff;">Felipe Andrés Espinoza Guajardo</strong>, Ingeniero Informático titulado de INACAP Sede Chillán, con sólida formación en desarrollo de software y experiencia en programación web <strong style="color:#fff;">Full Stack con Django</strong>. Cuento con dominio en bases de datos relacionales y NoSQL, implementación de soluciones en la nube con <strong style="color:#fff;">AWS y Azure</strong>, y conocimientos avanzados en ciberseguridad e inteligencia artificial. He colaborado en entornos escolares brindando soporte tecnológico y educativo, trabajando junto a equipos docentes de forma efectiva.
+            Soy <strong style="color:#fff;">Felipe Andrés Espinoza Guajardo</strong>, Ingeniero en Informática titulado de INACAP Sede Chillán. Me especializo en desarrollo de software Full Stack, administración de infraestructura cloud y soluciones tecnológicas orientadas a automatización y gestión digital. Trabajo con <strong style="color:#fff;">Python, Django, JavaScript, bases de datos SQL/NoSQL, AWS, Microsoft Azure y Linux</strong>, integrando buenas prácticas de ciberseguridad, inteligencia artificial y metodologías ágiles.
           </p>
-          <div class="about-feat">
-            <div class="af-icon"><i class="bi bi-code-slash"></i></div>
-            <div><h6>Full Stack & Cloud</h6><p>Desarrollo web con Django, APIs REST, y despliegue en AWS y Azure.</p></div>
-          </div>
-          <div class="about-feat">
-            <div class="af-icon"><i class="bi bi-shield-lock-fill"></i></div>
-            <div><h6>Ciberseguridad e IA</h6><p>Comprometido con la innovación, seguridad informática e inteligencia artificial.</p></div>
-          </div>
-          <div class="about-feat">
-            <div class="af-icon"><i class="bi bi-people-fill"></i></div>
-            <div><h6>Trabajo colaborativo</h6><p>Capacidad de adaptación rápida y experiencia en equipos multidisciplinarios.</p></div>
+          <div class="profile-panel">
+            <div class="d-flex flex-wrap gap-2 mb-4">
+              <a class="contact-chip" href="mailto:felipe.espinoza.informatica@gmail.com"><i class="bi bi-envelope"></i> felipe.espinoza.informatica@gmail.com</a>
+              <a class="contact-chip" href="tel:+56951810373"><i class="bi bi-phone"></i> +56 9 5181 0373</a>
+              <a class="contact-chip" href="https://espinozainformatica.cl/" target="_blank" rel="noopener"><i class="bi bi-globe2"></i> Portafolio Web</a>
+              <a class="contact-chip" href="https://github.com/xn1llox" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub · xn1llox</a>
+            </div>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <div class="signal-card"><strong>Full Stack</strong><span>Plataformas web, backend Django, frontend moderno e integración de APIs REST.</span></div>
+              </div>
+              <div class="col-md-4">
+                <div class="signal-card"><strong>Cloud & Linux</strong><span>Despliegues en AWS, Azure, Render, Cloudflare y administración de entornos Linux.</span></div>
+              </div>
+              <div class="col-md-4">
+                <div class="signal-card"><strong>Soporte IT</strong><span>Diagnóstico, mantención, soporte a usuarios y digitalización de procesos.</span></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -555,16 +1164,16 @@
   <section id="servicios">
     <div class="container">
       <div class="text-center mb-5" data-aos="fade-up">
-        <div class="sec-tag" style="justify-content:center;">Qué ofrecemos</div>
-        <h2 class="sec-title">Nuestros Servicios</h2>
-        <p style="color:var(--muted); max-width:560px; margin:0 auto;">Cobertura técnica completa para mantener tus equipos y sistemas al máximo rendimiento.</p>
+        <div class="sec-tag" style="justify-content:center;">Servicios IT</div>
+        <h2 class="sec-title">Qué puedo resolver por ti</h2>
+        <p style="color:var(--muted); max-width:620px; margin:0 auto;">Desde soporte técnico y optimización de equipos hasta desarrollo web, automatización y despliegue cloud para empresas, pymes y proyectos digitales.</p>
       </div>
       <div class="row g-4">
         <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
           <div class="service-card">
             <div class="service-icon"><i class="bi bi-pc-display-horizontal"></i></div>
             <h5>Mantención de Equipos</h5>
-            <p>Mantención preventiva y correctiva de computadores e impresoras para prolongar su vida útil.</p>
+            <p>Mantención preventiva y correctiva de computadores e impresoras para mejorar estabilidad y vida útil.</p>
           </div>
         </div>
         <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
@@ -591,15 +1200,286 @@
         <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
           <div class="service-card">
             <div class="service-icon"><i class="bi bi-code-square"></i></div>
-            <h5>Desarrollo de Software</h5>
-            <p>Aplicaciones de escritorio, web y sistemas de gestión personalizados para tu negocio.</p>
+            <h5>Desarrollo Full Stack</h5>
+            <p>Aplicaciones web, APIs REST, sistemas de gestión y automatización de procesos internos.</p>
           </div>
         </div>
         <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
           <div class="service-card">
             <div class="service-icon"><i class="bi bi-diagram-3-fill"></i></div>
-            <h5>Soluciones para Empresas</h5>
-            <p>Consultoría e implementación de soluciones tecnológicas integrales para pymes y empresas.</p>
+            <h5>Cloud & Empresas</h5>
+            <p>Consultoría, despliegue cloud, DNS, hosting, correo corporativo y soporte tecnológico integral.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section id="experiencia">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="sec-tag" style="justify-content:center;">Trayectoria</div>
+        <h2 class="sec-title">Experiencia Laboral</h2>
+        <p style="color:var(--muted); max-width:640px; margin:0 auto;">Experiencia práctica combinando soporte tecnológico, desarrollo de soluciones internas y acompañamiento a usuarios en entornos reales.</p>
+      </div>
+      <div class="timeline">
+        <article class="timeline-card" data-aos="fade-up">
+          <h3>Reemplazo Docente · Colegio Providencia</h3>
+          <div class="meta-line">
+            <span><i class="bi bi-geo-alt"></i> Parral, Región del Maule</span>
+            <span><i class="bi bi-calendar-event"></i> Mayo 2025 – Junio 2025</span>
+          </div>
+          <ul class="clean-list">
+            <li>Apoyo tecnológico y educativo en entorno escolar.</li>
+            <li>Refuerzo de contenidos computacionales y científicos.</li>
+            <li>Soporte técnico básico a usuarios y equipos.</li>
+            <li>Trabajo colaborativo con docentes y personal administrativo.</li>
+          </ul>
+        </article>
+        <article class="timeline-card" data-aos="fade-up" data-aos-delay="100">
+          <h3>Práctica Profesional Ingeniería en Informática · Ilustre Municipalidad de Parral</h3>
+          <div class="meta-line">
+            <span><i class="bi bi-geo-alt"></i> Parral, Región del Maule</span>
+            <span><i class="bi bi-calendar-event"></i> Marzo 2025 – Mayo 2025</span>
+          </div>
+          <ul class="clean-list">
+            <li>Desarrollo y soporte de soluciones tecnológicas internas.</li>
+            <li>Participación en digitalización de procesos administrativos.</li>
+            <li>Soporte y administración de sistemas web.</li>
+            <li>Gestión y mantenimiento de bases de datos.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS DESTACADOS -->
+  <section id="proyectos">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="sec-tag" style="justify-content:center;">Código y producto digital</div>
+        <h2 class="sec-title">Proyectos de Código</h2>
+        <p style="color:var(--muted); max-width:660px; margin:0 auto;">Aplicaciones web, software Open Source, despliegue cloud y productos digitales desarrollados como soluciones reales.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-6" data-aos="fade-up">
+          <article class="project-card">
+            <div class="project-media">
+              <img src="img/Agencia circuito.png" alt="Vista previa del sitio Agencia Circuito" loading="lazy" />
+            </div>
+            <div class="project-logo-strip">
+              <img src="img/agencia-circuito-logo.png" alt="Logo Agencia Circuito" class="project-logo" loading="lazy" />
+              <div>
+                <div class="project-logo-title">Agencia Circuito</div>
+                <div class="project-logo-sub">Web institucional · Publicidad B2B</div>
+              </div>
+            </div>
+            <h3>Desarrollo Web Completo · Agencia Circuito</h3>
+            <p>Desarrollo completo de plataforma web institucional desde cero, incluyendo frontend, backend, despliegue cloud y configuración de infraestructura tecnológica.</p>
+            <div class="repo-facts">
+              <div class="repo-fact"><strong>Live</strong><span>Sitio publicado</span></div>
+              <div class="repo-fact"><strong>B2B</strong><span>Modelo comercial</span></div>
+              <div class="repo-fact"><strong>Cloud</strong><span>Deploy + DNS</span></div>
+            </div>
+            <div class="skill-cloud mb-4">
+              <span class="tech-chip">HTML5</span>
+              <span class="tech-chip">CSS3</span>
+              <span class="tech-chip">JavaScript</span>
+              <span class="tech-chip">Cloudflare</span>
+              <span class="tech-chip">Render</span>
+              <span class="tech-chip">Zoho Mail</span>
+              <span class="tech-chip">DNS & Hosting</span>
+            </div>
+            <a class="project-link" href="https://agenciacircuito.cl/" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> agenciacircuito.cl</a>
+          </article>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <article class="project-card">
+            <div class="project-logo-strip">
+              <img src="img/zenith-logo.png" alt="Logo Zenith Audio Player" class="project-logo" loading="lazy" />
+              <div>
+                <div class="project-logo-title">Zenith Audio</div>
+                <div class="project-logo-sub">Windows Hi-Fi · React Native Android</div>
+              </div>
+            </div>
+            <div class="code-gallery">
+              <div class="code-shot desktop">
+                <img src="img/zenith windows .png" alt="Interfaz Zenith Audio Player para Windows" loading="lazy" />
+              </div>
+              <div class="code-shot android">
+                <img src="img/zenith android.jpeg" alt="Interfaz Zenith Audio Android" loading="lazy" />
+              </div>
+            </div>
+            <h3>Zenith Audio Player · Open Source</h3>
+            <p>Reproductor Hi-Fi para Windows creado con C#, WinUI 3, XAML y Windows App SDK, enfocado en bibliotecas locales de alta resolución, DSD/DSF, SACD ISO, visualización audiófila y asistente opcional ZenithAI.</p>
+            <div class="repo-facts">
+              <div class="repo-fact"><strong>C#</strong><span>Desktop main</span></div>
+              <div class="repo-fact"><strong>WinUI 3</strong><span>Windows app</span></div>
+              <div class="repo-fact"><strong>Apache 2.0</strong><span>Android repo</span></div>
+            </div>
+            <ul class="clean-list mb-4">
+              <li>Soporte documentado para FLAC, WAV, MP3, M4A, DSF/DFF, SACD ISO, letras y carátulas.</li>
+              <li>Conversión DSD a PCM cuando el equipo no cuenta con DAC o soporte DSD nativo.</li>
+              <li>Android está construido sobre React Native 0.85, React 19, TypeScript y react-native-track-player.</li>
+            </ul>
+            <div class="skill-cloud mb-4">
+              <span class="tech-chip">C#</span>
+              <span class="tech-chip">WinUI 3</span>
+              <span class="tech-chip">Windows App SDK</span>
+              <span class="tech-chip">Inno Setup</span>
+              <span class="tech-chip">React Native</span>
+              <span class="tech-chip">TypeScript</span>
+              <span class="tech-chip">Track Player</span>
+            </div>
+            <div class="d-flex flex-wrap gap-3">
+              <a class="project-link" href="https://github.com/xn1llox/Zenith-Audio-Player" target="_blank" rel="noopener"><i class="bi bi-github"></i> Zenith Audio Player Desktop</a>
+              <a class="project-link" href="https://github.com/xn1llox/Zenith-Audio-Android" target="_blank" rel="noopener"><i class="bi bi-github"></i> Zenith Audio Android</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCACION Y CERTIFICACIONES -->
+  <section id="formacion">
+    <div class="container">
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="edu-card">
+            <div class="sec-tag">Educación</div>
+            <h2 class="sec-title mb-3">INACAP Sede Chillán</h2>
+            <h3>Ingeniería en Informática</h3>
+            <p class="mb-3">Titulado · 2021 – 2025</p>
+            <div class="lang-card">
+              <div><i class="bi bi-translate me-2"></i> Español</div>
+              <span>Nativo</span>
+            </div>
+            <div class="lang-card mt-3">
+              <div><i class="bi bi-terminal me-2"></i> Inglés</div>
+              <span>Intermedio técnico</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="edu-card">
+            <div class="sec-tag">Certificaciones</div>
+            <h2 class="sec-title mb-3">Formación continua</h2>
+            <div class="cert-list">
+              <div class="cert-item"><i class="bi bi-award"></i> CISCO Networking Academy · Introduction to Cybersecurity (2024)</div>
+              <div class="cert-item"><i class="bi bi-award"></i> CISCO Networking Academy · Foundations of Cybersecurity (2024)</div>
+              <div class="cert-item"><i class="bi bi-award"></i> CISCO Networking Academy · Computer Hardware Basics (2024)</div>
+              <div class="cert-item"><i class="bi bi-award"></i> INCIBE España + Google · Ciberseguridad en el Teletrabajo (2024)</div>
+              <div class="cert-item"><i class="bi bi-award"></i> Edureka! · AWS Beginners Course (2024)</div>
+              <div class="cert-item"><i class="bi bi-award"></i> Santander Open Academy · Big Data (2024)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section id="habilidades">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="sec-tag" style="justify-content:center;">Stack técnico</div>
+        <h2 class="sec-title">Habilidades Técnicas</h2>
+        <p style="color:var(--muted); max-width:650px; margin:0 auto;">Toolkit principal para construir, desplegar y mantener productos digitales modernos.</p>
+      </div>
+      <div class="toolkit-grid" data-aos="fade-up">
+        <div class="toolkit-item">
+          <div class="toolkit-icon"><i class="bi bi-filetype-py"></i></div>
+          <div><strong>Python</strong><span>Backend & automatización</span></div>
+        </div>
+        <div class="toolkit-item">
+          <div class="toolkit-icon"><i class="bi bi-braces"></i></div>
+          <div><strong>Django</strong><span>Web apps & APIs REST</span></div>
+        </div>
+        <div class="toolkit-item">
+          <div class="toolkit-icon"><i class="bi bi-cloud-check"></i></div>
+          <div><strong>AWS / Azure</strong><span>Cloud & despliegues</span></div>
+        </div>
+        <div class="toolkit-item">
+          <div class="toolkit-icon"><i class="bi bi-terminal"></i></div>
+          <div><strong>Linux</strong><span>Servers & administración</span></div>
+        </div>
+        <div class="toolkit-item">
+          <div class="toolkit-icon"><i class="bi bi-database-check"></i></div>
+          <div><strong>PostgreSQL</strong><span>Datos relacionales</span></div>
+        </div>
+        <div class="toolkit-item">
+          <div class="toolkit-icon"><i class="bi bi-github"></i></div>
+          <div><strong>GitHub</strong><span>Open Source & control</span></div>
+        </div>
+        <div class="toolkit-item">
+          <div class="toolkit-icon"><i class="bi bi-shield-lock"></i></div>
+          <div><strong>Cybersecurity</strong><span>Buenas prácticas</span></div>
+        </div>
+        <div class="toolkit-item">
+          <div class="toolkit-icon"><i class="bi bi-soundwave"></i></div>
+          <div><strong>Audio Tech</strong><span>Zenith Hi-Fi projects</span></div>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up">
+          <div class="skill-panel">
+            <div class="skill-group">
+              <h4><i class="bi bi-code-square me-2"></i>Desarrollo</h4>
+              <div class="skill-cloud">
+                <span class="tech-chip">Python</span>
+                <span class="tech-chip">Django</span>
+                <span class="tech-chip">JavaScript</span>
+                <span class="tech-chip">HTML5</span>
+                <span class="tech-chip">CSS3</span>
+                <span class="tech-chip">APIs REST</span>
+                <span class="tech-chip">Git & GitHub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
+          <div class="skill-panel">
+            <div class="skill-group">
+              <h4><i class="bi bi-database me-2"></i>Bases de Datos</h4>
+              <div class="skill-cloud">
+                <span class="tech-chip">MySQL</span>
+                <span class="tech-chip">PostgreSQL</span>
+                <span class="tech-chip">MongoDB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="160">
+          <div class="skill-panel">
+            <div class="skill-group">
+              <h4><i class="bi bi-cloud me-2"></i>Cloud & Sistemas</h4>
+              <div class="skill-cloud">
+                <span class="tech-chip">AWS EC2</span>
+                <span class="tech-chip">AWS S3</span>
+                <span class="tech-chip">AWS RDS</span>
+                <span class="tech-chip">Microsoft Azure</span>
+                <span class="tech-chip">Linux</span>
+                <span class="tech-chip">Windows</span>
+                <span class="tech-chip">MacOS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+          <div class="skill-panel">
+            <div class="skill-group">
+              <h4><i class="bi bi-cpu me-2"></i>Metodologías</h4>
+              <div class="skill-cloud">
+                <span class="tech-chip">Scrum</span>
+                <span class="tech-chip">Agile</span>
+                <span class="tech-chip">IA</span>
+                <span class="tech-chip">Machine Learning</span>
+                <span class="tech-chip">Ciberseguridad</span>
+                <span class="tech-chip">Cloud Computing</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -610,16 +1490,16 @@
   <section id="trabajos">
     <div class="container">
       <div class="text-center mb-5" data-aos="fade-up">
-        <div class="sec-tag" style="justify-content:center;">En terreno</div>
-        <h2 class="sec-title">Trabajos Realizados</h2>
-        <p style="color:var(--muted); max-width:560px; margin:0 auto;">Evidencia real de los trabajos: limpieza profunda de equipos, reparación de hardware y asistencia técnica en clientes.</p>
+        <div class="sec-tag" style="justify-content:center;">Reparaciones y soporte</div>
+        <h2 class="sec-title">Trabajos Técnicos en Terreno</h2>
+        <p style="color:var(--muted); max-width:620px; margin:0 auto;">Registro visual de mantenciones, reparaciones y soporte físico: diagnóstico, limpieza profunda, hardware y asistencia técnica a usuarios.</p>
       </div>
       <div class="row g-3">
         <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
           <div class="gal-item" data-bs-toggle="modal" data-bs-target="#galModal"
                data-img="img/mantenimiento.jpeg"
                data-cap="Antes de limpieza – ventiladores colmatados en laptop">
-            <img src="img/mantenimiento.jpeg" alt="Antes limpieza" />
+            <img src="img/mantenimiento.jpeg" alt="Antes limpieza" loading="lazy" />
             <div class="gal-overlay">
               <div class="gal-cap"><i class="bi bi-zoom-in"></i> Antes de limpieza</div>
             </div>
@@ -629,7 +1509,7 @@
           <div class="gal-item" data-bs-toggle="modal" data-bs-target="#galModal"
                data-img="img/limpieza final.jpeg"
                data-cap="Después de limpieza – laptop lista para operar">
-            <img src="img/limpieza final.jpeg" alt="Después limpieza" />
+            <img src="img/limpieza final.jpeg" alt="Después limpieza" loading="lazy" />
             <div class="gal-overlay">
               <div class="gal-cap"><i class="bi bi-zoom-in"></i> Después de limpieza</div>
             </div>
@@ -639,7 +1519,7 @@
           <div class="gal-item" data-bs-toggle="modal" data-bs-target="#galModal"
                data-img="img/torre.jpeg"
                data-cap="Reparación de torre de escritorio – motherboard ASUS">
-            <img src="img/torre.jpeg" alt="Torre PC" />
+            <img src="img/torre.jpeg" alt="Torre PC" loading="lazy" />
             <div class="gal-overlay">
               <div class="gal-cap"><i class="bi bi-zoom-in"></i> Reparación torre</div>
             </div>
@@ -649,7 +1529,7 @@
           <div class="gal-item" data-bs-toggle="modal" data-bs-target="#galModal"
                data-img="img/Colegio.jpeg"
                data-cap="Trabajo en colegio – configuración de impresoras y red">
-            <img src="img/Colegio.jpeg" alt="Trabajo colegio" />
+            <img src="img/Colegio.jpeg" alt="Trabajo colegio" loading="lazy" />
             <div class="gal-overlay">
               <div class="gal-cap"><i class="bi bi-zoom-in"></i> Trabajo en terreno</div>
             </div>
@@ -678,9 +1558,9 @@
   <section id="contacto">
     <div class="container">
       <div class="text-center mb-5" data-aos="fade-up">
-        <div class="sec-tag" style="justify-content:center;">Hablemos</div>
-        <h2 class="sec-title">Contacto</h2>
-        <p style="color:var(--muted); max-width:500px; margin:0 auto;">¿Tu equipo tiene problemas o necesitas un proyecto tecnológico? Escríbenos y te respondemos pronto.</p>
+        <div class="sec-tag" style="justify-content:center;">Conectemos</div>
+        <h2 class="sec-title">Hablemos de tu próximo proyecto</h2>
+        <p style="color:var(--muted); max-width:610px; margin:0 auto;">Si necesitas desarrollo web, soporte IT, despliegue cloud, automatización o mantención de equipos, escríbeme y revisamos la mejor solución.</p>
       </div>
       <div class="row justify-content-center">
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
@@ -716,8 +1596,18 @@
             <div class="contact-item">
               <div class="ci-icon"><i class="bi bi-share-fill"></i></div>
               <div>
-                <div class="ci-label">Redes sociales</div>
+                <div class="ci-label">Web y repositorios</div>
                 <div class="ci-value d-flex gap-3 mt-1">
+                  <a href="https://espinozainformatica.cl/" target="_blank" rel="noopener" style="color:var(--cyan); text-decoration:none;"><i class="bi bi-globe2"></i> Portafolio</a>
+                  <a href="https://github.com/xn1llox" target="_blank" rel="noopener" style="color:var(--cyan); text-decoration:none;"><i class="bi bi-github"></i> GitHub</a>
+                </div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="bi bi-instagram"></i></div>
+              <div>
+                <div class="ci-label">Redes sociales</div>
+                <div class="ci-value d-flex gap-3 mt-1 flex-wrap">
                   <a href="https://www.facebook.com/share/18B9kzDeaR/" target="_blank" rel="noopener" style="color:var(--cyan); text-decoration:none;"><i class="bi bi-facebook"></i> Facebook</a>
                   <a href="https://www.instagram.com/xn1llox?igsh=ZzVwbWJ5Z2duZjBh" target="_blank" rel="noopener" style="color:var(--cyan); text-decoration:none;"><i class="bi bi-instagram"></i> Instagram</a>
                 </div>
@@ -737,10 +1627,12 @@
   <!-- FOOTER -->
   <footer>
     <div class="container">
-      <img src="img/logo.jpeg" alt="Espinoza Informática" style="height:38px; border-radius:6px; margin-bottom:12px;" />
-      <p class="mb-1 brand">Felipe Espinoza IT Solutions</p>
-      <p class="mb-1" style="font-size:0.82rem;">Informática Felipe Andrés Espinoza E.I.R.L. · Parral, Chile</p>
+      <img src="img/logo.jpeg" alt="Espinoza Informática" style="height:38px; border-radius:6px; margin-bottom:12px;" loading="lazy" />
+      <p class="mb-1 brand">Felipe Andrés Espinoza Guajardo</p>
+      <p class="mb-1" style="font-size:0.82rem;">Ingeniero en Informática · Full Stack Developer · Cloud & IT Support · Parral, Chile</p>
       <div class="social-links d-flex justify-content-center gap-2 my-3">
+        <a href="https://github.com/xn1llox" target="_blank" rel="noopener" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://espinozainformatica.cl/" target="_blank" rel="noopener" title="Portafolio"><i class="bi bi-globe2"></i></a>
         <a href="https://www.facebook.com/share/18B9kzDeaR/" target="_blank" rel="noopener" title="Facebook"><i class="bi bi-facebook"></i></a>
         <a href="https://www.instagram.com/xn1llox?igsh=ZzVwbWJ5Z2duZjBh" target="_blank" rel="noopener" title="Instagram"><i class="bi bi-instagram"></i></a>
         <a href="https://wa.me/56951810373" target="_blank" rel="noopener" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
