@@ -48,13 +48,24 @@
       --line: rgba(148,163,184,0.16);
     }
 
-    html { scroll-behavior: smooth; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
 
     body {
       background: var(--bg);
       color: var(--text);
       font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
       letter-spacing: -0.01em;
+      overflow-x: hidden;
+      width: 100%;
     }
 
     body::before {
@@ -995,6 +1006,14 @@
     }
 
     @media (max-width: 991.98px) {
+      #inicio {
+        min-height: auto;
+        padding-top: 110px;
+        padding-bottom: 58px;
+      }
+      #inicio .row {
+        --bs-gutter-x: 0;
+      }
       .navbar-nav {
         padding: 1rem 0;
       }
@@ -1021,6 +1040,49 @@
 
     @media (max-width: 575.98px) {
       section { padding: 72px 0; }
+      .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .navbar {
+        min-height: 78px;
+      }
+      .navbar-logo {
+        height: 34px;
+      }
+      .hero-glow {
+        width: 360px;
+        height: 360px;
+        filter: blur(95px);
+      }
+      .hero-tag {
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        white-space: normal;
+        text-align: center;
+        line-height: 1.5;
+        font-size: 0.72rem;
+        padding: 7px 12px;
+      }
+      .hero-title {
+        font-size: clamp(2.45rem, 15vw, 3.55rem);
+        line-height: 1.05;
+        overflow-wrap: anywhere;
+      }
+      .hero-sub {
+        max-width: 100%;
+        font-size: 1rem;
+        line-height: 1.75;
+      }
+      .hero-meta,
+      .hero-live,
+      .hero-actions {
+        width: 100%;
+        max-width: 100%;
+      }
       .contact-card,
       .profile-panel,
       .timeline-card,
@@ -1034,6 +1096,44 @@
       .tech-chip {
         width: 100%;
         justify-content: center;
+        text-align: center;
+      }
+      .live-pill {
+        width: 100%;
+        white-space: normal;
+        line-height: 1.35;
+        align-items: flex-start;
+      }
+      .status-dot {
+        margin-top: 0.25rem;
+        flex: 0 0 auto;
+      }
+      .hero-actions {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem !important;
+      }
+      .hero-actions .btn-cta,
+      .hero-actions .btn-ghost,
+      .hero-actions .btn-wa {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        padding-left: 0.95rem;
+        padding-right: 0.95rem;
+      }
+      .hero-actions .btn-wa {
+        grid-column: 1 / -1;
+      }
+      .terminal {
+        max-width: 100%;
+        margin-top: 1.4rem;
+        animation: none;
+      }
+      .term-body {
+        padding: 1.05rem;
+        font-size: 0.76rem;
+        overflow-wrap: anywhere;
       }
       .wa-float {
         width: 52px;
@@ -1091,7 +1191,7 @@
             <div class="live-pill"><span class="status-dot"></span> Disponible para proyectos freelance y soporte IT</div>
             <div class="live-pill"><span class="status-dot"></span> Actualmente desarrollando Zenith Audio</div>
           </div>
-          <div class="d-flex flex-wrap gap-3">
+          <div class="hero-actions d-flex flex-wrap gap-3">
             <a href="#proyectos" class="btn-cta">Ver proyectos</a>
             <a href="https://github.com/xn1llox" target="_blank" rel="noopener" class="btn-ghost"><i class="bi bi-github"></i> GitHub</a>
             <a href="https://wa.me/56951810373?text=Hola%2C%20necesito%20información%20sobre%20sus%20servicios" target="_blank" rel="noopener" class="btn-wa"><i class="bi bi-whatsapp me-2"></i>WhatsApp</a>
