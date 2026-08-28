@@ -25,7 +25,7 @@
   <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
     /* ===== Variables tech profesional ===== */
@@ -41,9 +41,9 @@
       --cyan-md: rgba(88,166,255,0.28);
       --border:  rgba(88,166,255,0.18);
       --text:    #e6edf3;
-      --muted:   #8b949e;
+      --muted:   #a3acb9;
       --card-text: #e6edf3;
-      --card-muted: #a7b3c2;
+      --card-muted: #b8c2d0;
       --success: #22c55e;
       --line: rgba(148,163,184,0.16);
     }
@@ -62,10 +62,13 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+      font-family: 'Inter', 'Space Grotesk', 'Segoe UI', sans-serif;
+      font-weight: 500;
       letter-spacing: -0.01em;
+      line-height: 1.7;
       overflow-x: hidden;
       width: 100%;
+      font-size: 0.95rem;
     }
 
     body::before {
@@ -197,7 +200,7 @@
 
     .hero-sub {
       font-size: 1.05rem;
-      color: var(--muted);
+      color: #cbd4e1;
       max-width: 520px;
       line-height: 1.8;
       margin-bottom: 2rem;
@@ -219,6 +222,7 @@
       border-radius: 999px;
       padding: 8px 13px;
       font-size: 0.83rem;
+      font-weight: 500;
     }
 
     .hero-live {
@@ -684,7 +688,8 @@
       display: grid;
       gap: 0.55rem;
       color: var(--card-muted);
-      font-size: 0.92rem;
+      font-size: 0.94rem;
+      font-weight: 500;
     }
     .clean-list li {
       position: relative;
@@ -938,6 +943,47 @@
       box-shadow: 0 8px 24px rgba(37,211,102,0.3);
     }
 
+    /* ===== Streaming / Radio ===== */
+    .audio-player-minimal {
+      margin: 1.1rem 0 1.2rem;
+      padding: 1rem 1.1rem;
+      border: 1px solid rgba(34,211,238,0.22);
+      border-radius: 16px;
+      background: rgba(34,211,238,0.06);
+    }
+    .audio-player-minimal p {
+      color: var(--card-text);
+      margin-bottom: 0.55rem;
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .audio-player-minimal audio {
+      width: 100%;
+      max-width: 400px;
+      height: 36px;
+      border-radius: 20px;
+    }
+    .btn-stream {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--cyan);
+      font-weight: 700;
+      text-decoration: none;
+      border: 1px solid rgba(34,211,238,0.4);
+      border-radius: 999px;
+      padding: 8px 16px;
+      background: rgba(34,211,238,0.08);
+      transition: all 0.25s;
+    }
+    .btn-stream:hover {
+      color: #fff;
+      background: rgba(34,211,238,0.18);
+      border-color: rgba(34,211,238,0.7);
+    }
+
     /* ===== Footer ===== */
     footer {
       background: #070d1a;
@@ -1153,7 +1199,7 @@
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#inicio">
-        <img src="img/logo.jpeg" alt="Espinoza Informática" class="navbar-logo" />
+        <img src="img/logo.jpeg" alt="Espinoza Informática - Logo" class="navbar-logo" />
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Abrir menú de navegación">
         <span class="navbar-toggler-icon"></span>
@@ -1194,7 +1240,7 @@
           <div class="hero-actions d-flex flex-wrap gap-3">
             <a href="#proyectos" class="btn-cta">Ver proyectos</a>
             <a href="https://github.com/xn1llox" target="_blank" rel="noopener" class="btn-ghost"><i class="bi bi-github"></i> GitHub</a>
-            <a href="https://wa.me/56951810373?text=Hola%2C%20necesito%20información%20sobre%20sus%20servicios" target="_blank" rel="noopener" class="btn-wa"><i class="bi bi-whatsapp me-2"></i>WhatsApp</a>
+            <a href="https://wa.me/56987677557?text=Hola%2C%20necesito%20información%20sobre%20sus%20servicios" target="_blank" rel="noopener" class="btn-wa"><i class="bi bi-whatsapp me-2"></i>WhatsApp</a>
           </div>
         </div>
         <div class="col-lg-5 offset-lg-1" data-aos="fade-left" data-aos-delay="150">
@@ -1228,7 +1274,7 @@
     <div class="container">
       <div class="row align-items-center g-5">
         <div class="col-lg-4" data-aos="fade-right">
-          <img src="img/yo.jpeg" alt="Felipe Andrés Espinoza Guajardo" class="about-photo" loading="lazy" />
+          <img src="img/yo.jpeg" alt="Felipe Andrés Espinoza Guajardo - Ingeniero en Informática" class="about-photo" loading="lazy" />
         </div>
         <div class="col-lg-7 offset-lg-1" data-aos="fade-left" data-aos-delay="100">
           <div class="sec-tag">Perfil profesional</div>
@@ -1239,7 +1285,7 @@
           <div class="profile-panel">
             <div class="d-flex flex-wrap gap-2 mb-4">
               <a class="contact-chip" href="mailto:felipe.espinoza.informatica@gmail.com"><i class="bi bi-envelope"></i> felipe.espinoza.informatica@gmail.com</a>
-              <a class="contact-chip" href="tel:+56951810373"><i class="bi bi-phone"></i> +56 9 5181 0373</a>
+              <a class="contact-chip" href="tel:+56987677557"><i class="bi bi-phone"></i> +56 9 87677557</a>
               <a class="contact-chip" href="https://espinozainformatica.cl/" target="_blank" rel="noopener"><i class="bi bi-globe2"></i> Portafolio Web</a>
               <a class="contact-chip" href="https://github.com/xn1llox" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub · xn1llox</a>
             </div>
@@ -1366,7 +1412,7 @@
         <div class="col-lg-6" data-aos="fade-up">
           <article class="project-card">
             <div class="project-media">
-              <img src="img/Agencia circuito.png" alt="Vista previa del sitio Agencia Circuito" loading="lazy" />
+              <img src="img/Agencia circuito.png" alt="Agencia Circuito - Sitio web institucional desarrollado por Espinoza Informática" loading="lazy" />
             </div>
             <div class="project-logo-strip">
               <img src="img/agencia-circuito-logo.png" alt="Logo Agencia Circuito" class="project-logo" loading="lazy" />
@@ -1404,12 +1450,12 @@
               </div>
             </div>
             <div class="code-gallery">
-              <div class="code-shot desktop">
-                <img src="img/zenith windows .png" alt="Interfaz Zenith Audio Player para Windows" loading="lazy" />
-              </div>
-              <div class="code-shot android">
-                <img src="img/zenith android.jpeg" alt="Interfaz Zenith Audio Android" loading="lazy" />
-              </div>
+<div class="code-shot desktop">
+               <img src="img/zenith windows .png" alt="Zenith Audio Player para Windows - Interfaz Hi-Fi con soporte DSD/DSF" loading="lazy" />
+             </div>
+             <div class="code-shot android">
+               <img src="img/zenith android.jpeg" alt="Zenith Audio Android - Reproductor móvil con React Native" loading="lazy" />
+             </div>
             </div>
             <h3>Zenith Audio Player · Open Source</h3>
             <p>Reproductor Hi-Fi para Windows creado con C#, WinUI 3, XAML y Windows App SDK, enfocado en bibliotecas locales de alta resolución, DSD/DSF, SACD ISO, visualización audiófila y asistente opcional ZenithAI.</p>
@@ -1423,6 +1469,18 @@
               <li>Conversión DSD a PCM cuando el equipo no cuenta con DAC o soporte DSD nativo.</li>
               <li>Android está construido sobre React Native 0.85, React 19, TypeScript y react-native-track-player.</li>
             </ul>
+            <div class="audio-player-minimal">
+              <p><i class="bi bi-broadcast"></i> <strong>Streaming en Vivo:</strong></p>
+              <audio controls preload="none">
+                <source src="https://radio.espinozainformatica.cl/stream" type="audio/mpeg" />
+                Tu navegador no soporta el elemento de audio.
+              </audio>
+              <div class="mt-2">
+                <a href="https://radio.espinozainformatica.cl/stream" target="_blank" rel="noopener" class="btn-stream">
+                  <i class="bi bi-radio"></i> Escuchar transmisión en vivo
+                </a>
+              </div>
+            </div>
             <div class="skill-cloud mb-4">
               <span class="tech-chip">C#</span>
               <span class="tech-chip">WinUI 3</span>
@@ -1467,6 +1525,13 @@
             <div class="sec-tag">Certificaciones</div>
             <h2 class="sec-title mb-3">Formación continua</h2>
             <div class="cert-list">
+              <div class="cert-item">
+                <i class="bi bi-award"></i>
+                <div>
+                  <strong>Fundamentos de Ciberseguridad</strong> · Instituto Profesional INACAP – Egresados y Empleabilidad a través de <em>Cisco Networking Academy</em> (Agosto 2026)<br />
+                  <span style="font-size:0.82rem; color:var(--muted);">Instructor: Betsy Ramirez Toledo (Profesional INACAP – Egresados y Empleabilidad)</span>
+                </div>
+              </div>
               <div class="cert-item"><i class="bi bi-award"></i> CISCO Networking Academy · Introduction to Cybersecurity (2024)</div>
               <div class="cert-item"><i class="bi bi-award"></i> CISCO Networking Academy · Foundations of Cybersecurity (2024)</div>
               <div class="cert-item"><i class="bi bi-award"></i> CISCO Networking Academy · Computer Hardware Basics (2024)</div>
@@ -1599,7 +1664,7 @@
           <div class="gal-item" data-bs-toggle="modal" data-bs-target="#galModal"
                data-img="img/mantenimiento.jpeg"
                data-cap="Antes de limpieza – ventiladores colmatados en laptop">
-            <img src="img/mantenimiento.jpeg" alt="Antes limpieza" loading="lazy" />
+            <img src="img/mantenimiento.jpeg" alt="Mantención de laptop - Ventiladores colmatados antes de limpieza" loading="lazy" />
             <div class="gal-overlay">
               <div class="gal-cap"><i class="bi bi-zoom-in"></i> Antes de limpieza</div>
             </div>
@@ -1609,7 +1674,7 @@
           <div class="gal-item" data-bs-toggle="modal" data-bs-target="#galModal"
                data-img="img/limpieza final.jpeg"
                data-cap="Después de limpieza – laptop lista para operar">
-            <img src="img/limpieza final.jpeg" alt="Después limpieza" loading="lazy" />
+            <img src="img/limpieza final.jpeg" alt="Laptop después de limpieza profunda - Sistema operativo" loading="lazy" />
             <div class="gal-overlay">
               <div class="gal-cap"><i class="bi bi-zoom-in"></i> Después de limpieza</div>
             </div>
@@ -1619,7 +1684,7 @@
           <div class="gal-item" data-bs-toggle="modal" data-bs-target="#galModal"
                data-img="img/torre.jpeg"
                data-cap="Reparación de torre de escritorio – motherboard ASUS">
-            <img src="img/torre.jpeg" alt="Torre PC" loading="lazy" />
+            <img src="img/torre.jpeg" alt="Reparación de torre de escritorio con motherboard ASUS" loading="lazy" />
             <div class="gal-overlay">
               <div class="gal-cap"><i class="bi bi-zoom-in"></i> Reparación torre</div>
             </div>
@@ -1629,7 +1694,7 @@
           <div class="gal-item" data-bs-toggle="modal" data-bs-target="#galModal"
                data-img="img/Colegio.jpeg"
                data-cap="Trabajo en colegio – configuración de impresoras y red">
-            <img src="img/Colegio.jpeg" alt="Trabajo colegio" loading="lazy" />
+            <img src="img/Colegio.jpeg" alt="Trabajo en colegio - Configuración de impresoras y red" loading="lazy" />
             <div class="gal-overlay">
               <div class="gal-cap"><i class="bi bi-zoom-in"></i> Trabajo en terreno</div>
             </div>
@@ -1669,7 +1734,7 @@
               <div class="ci-icon"><i class="bi bi-telephone-fill"></i></div>
               <div>
                 <div class="ci-label">Teléfono</div>
-                <div class="ci-value"><a href="tel:+56951810373">+56 9 5181 0373</a></div>
+                <div class="ci-value"><a href="tel:+56987677557">+56 9 87677557</a></div>
               </div>
             </div>
             <div class="contact-item">
@@ -1728,7 +1793,7 @@
               </div>
             </div>
             <div class="text-center mt-4">
-              <a href="https://wa.me/56951810373?text=Hola%2C%20necesito%20información%20sobre%20sus%20servicios" target="_blank" rel="noopener" class="btn-wa-lg">
+              <a href="https://wa.me/56987677557?text=Hola%2C%20necesito%20información%20sobre%20sus%20servicios" target="_blank" rel="noopener" class="btn-wa-lg">
                 <i class="bi bi-whatsapp"></i> Escríbenos por WhatsApp
               </a>
             </div>
@@ -1745,19 +1810,19 @@
       <p class="mb-1 brand">Felipe Andrés Espinoza Guajardo</p>
       <p class="mb-1" style="font-size:0.82rem;">Ingeniero en Informática · Full Stack Developer · Cloud & IT Support · Parral, Chile</p>
       <p class="mb-1" style="font-size:0.78rem;">INFORMÁTICA FELIPE ANDRES ESPINOZA E.I.R.L. · RUT 78.188.765-K</p>
-      <div class="social-links d-flex justify-content-center gap-2 my-3">
-        <a href="https://github.com/xn1llox" target="_blank" rel="noopener" title="GitHub"><i class="bi bi-github"></i></a>
-        <a href="https://espinozainformatica.cl/" target="_blank" rel="noopener" title="Portafolio"><i class="bi bi-globe2"></i></a>
-        <a href="https://www.facebook.com/share/18B9kzDeaR/" target="_blank" rel="noopener" title="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/xn1llox?igsh=ZzVwbWJ5Z2duZjBh" target="_blank" rel="noopener" title="Instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://wa.me/56951810373" target="_blank" rel="noopener" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-      </div>
+<div class="social-links d-flex justify-content-center gap-2 my-3">
+         <a href="https://github.com/xn1llox" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+         <a href="https://espinozainformatica.cl/" target="_blank" rel="noopener" aria-label="Portafolio"><i class="bi bi-globe2"></i></a>
+         <a href="https://www.facebook.com/share/18B9kzDeaR/" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+         <a href="https://www.instagram.com/xn1llox?igsh=ZzVwbWJ5Z2duZjBh" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+         <a href="https://wa.me/56987677557" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+       </div>
       <p class="mb-0" style="font-size:0.78rem;">&copy; <span id="year"></span> Todos los derechos reservados.</p>
     </div>
   </footer>
 
   <!-- WhatsApp flotante -->
-  <a href="https://wa.me/56951810373?text=Hola%2C%20necesito%20información%20sobre%20sus%20servicios" target="_blank" rel="noopener" class="wa-float" title="WhatsApp">
+  <a href="https://wa.me/56987677557?text=Hola%2C%20necesito%20información%20sobre%20sus%20servicios" target="_blank" rel="noopener" class="wa-float" title="WhatsApp">
     <i class="bi bi-whatsapp"></i>
   </a>
 
